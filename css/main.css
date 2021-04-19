@@ -1,0 +1,67 @@
+:root {
+	--sky-blue: #87ceeb;
+}
+
+body {
+	background-color: var(--sky-blue);
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.pedastal-wrapper {
+	position: absolute;
+    bottom: 5px;
+    height: 200px;
+}
+
+.pedastal {
+    height: 100%;
+}
+
+.cloud {
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 400px 400px 60px 0px #fff;
+    position: absolute;
+    top: -320px;
+    left: -200px;
+    animation: cloudAnimation 90s infinite backwards;
+}
+
+.cloud-2 {    
+    filter: url(#filter-2);
+    top: -220px;
+    animation-delay: 30s;
+}
+
+.cloud-3 {
+    filter: url(#filter-3);
+    top: -180px;
+    animation-delay: 60s;
+}
+
+
+@keyframes cloudAnimation {
+   0% {
+       transform: translateX(-200%);
+       animation-timing-function: linear;
+   }
+
+   100% {
+       transform: translateX(500%);
+       animation-timing-function: linear;
+   }
+}
+
+

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Böögg</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#87ceeb">
+</head>
+
+  <body>
+    <div class="wrapper">
+      <div class="sky">
+        <div class="cloud"></div>
+        <svg width="0" height="0"> 
+          <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+          </filter>
+        </svg>
+        <div class="cloud cloud-2"></div>
+        <svg width="0" height="0"> 
+          <filter id="filter-2">
+            <feTurbulence type="fractalNoise" baseFrequency=".015" numOctaves="8" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+          </filter>
+        </svg>
+        <div class="cloud cloud-3"></div>
+        <svg width="0" height="0"> 
+          <filter id="filter-3">
+            <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="9" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+          </filter>
+        </svg>
+      </div>
+      <div class="pedastal-wrapper">
+        <img class="pedastal" src="./images/sockel.png" alt="pedastal">
+      </div>
+      <img src="./images/skyline.png" alt="Zurich Skyline">
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
