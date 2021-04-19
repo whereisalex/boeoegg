@@ -1,198 +1,195 @@
 :root {
-	--black: #2e2e2e;
-	--brown: #8B4513;
-	--sky-blue: #87ceeb;
-	--white: #fefefe;
+  --black: #2e2e2e;
+  --brown: #8b4513;
+  --sky-blue: #87ceeb;
+  --grey: #f1f1f1;
+  --white: #fefefe;
 }
 
 body {
-	background-color: var(--sky-blue);
-	margin: 0;
-	height: 100vh;
-	overflow: hidden;
+  background-color: var(--sky-blue);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 .wrapper {
-	display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
 }
 
 .skyline {
-	z-index: 1;
+  z-index: 1;
 }
 
 .cloud {
-    width: 250px;
-    height: 150px;
-    border-radius: 50%;
-    filter: url(#filter);
-    box-shadow: 400px 400px 60px 0px #fff;
-    position: absolute;
-    top: -320px;
-    left: -200px;
-    animation: cloudAnimation 90s infinite backwards;
+  animation: cloudAnimation 90s infinite backwards;
+  border-radius: 50%;
+  box-shadow: 400px 400px 60px 0 var(--white);
+  filter: url(#filter);
+  height: 150px;
+  left: -200px;
+  position: absolute;
+  top: -320px;
+  width: 250px;
 }
 
-.cloud-2 {    
-    filter: url(#filter-2);
-    top: -220px;
-    animation-delay: 30s;
+.cloud-2 {
+  animation-delay: 30s;
+  filter: url(#filter-2);
+  top: -220px;
 }
 
 .cloud-3 {
-    filter: url(#filter-3);
-    top: -180px;
-    animation-delay: 60s;
+  animation-delay: 60s;
+  filter: url(#filter-3);
+  top: -180px;
 }
 
 .boeoegg {
-	height: 300px;
-	position: relative;
-	bottom: -50px;
-	cursor: url(./../images/fire-cursor.png), auto;
+  bottom: -50px;
+  cursor: url(./../images/fire-cursor.png), auto;
+  height: 300px;
+  position: relative;
 }
 
 .head {
-	background-color: var(--white);
-	border: 1px solid #f1f1f1;
-	height: 100px;
-	width: 100px;
-	border-radius: 50%;
-	position: relative;
-    right: -5px;
-    top: 16px;
-    z-index: 30;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  height: 100px;
+  position: relative;
+  right: -5px;
+  top: 16px;
+  width: 100px;
+  z-index: 30;
 }
 
 .hat {
-	transform: scale(1.1, 1.2) perspective(.95em) rotateX(3deg);
-	position: absolute;
-	top: -15px;
-    left: 10px;
-    height: 50px;
-    width: 90px;
-	background-image: radial-gradient(white 20%, transparent 20%),
-    radial-gradient(white 20%, transparent 20%);
-	background-color: var(--brown);
-	background-position: 0 0, 50px 50px;
-	background-size: 20px 20px;
-	z-index: 80;
+  background-color: var(--brown);
+  background-image: radial-gradient(var(--white) 20%, transparent 20%),
+    radial-gradient(var(--white) 20%, transparent 20%);
+  background-position: 0 0, 50px 50px;
+  background-size: 20px 20px;
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  top: -15px;
+  transform: scale(1.1, 1.2) perspective(0.95em) rotateX(3deg);
+  width: 90px;
+  z-index: 80;
 }
 
 .eye {
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	background: var(--black);
-	top: 42px;
-	border-radius: 50%;
-	z-index: 90;
+  background: var(--black);
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  top: 42px;
+  width: 10px;
+  z-index: 90;
 }
 
 .eye-left {
-	left: 25px;
+  left: 25px;
 }
 
 .eye-right {
-	right: 25px;
+  right: 25px;
 }
 
 .mouth {
-    position: absolute;
-    width: 44%;
-    left: 28%;
-    height: 25%;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    top: 45%;
-    border-bottom-color: #000;
+  border: 2px solid transparent;
+  border-bottom-color: #000;
+  border-radius: 50%;
+  height: 25%;
+  left: 28%;
+  position: absolute;
+  top: 45%;
+  width: 44%;
 }
 
 .mouth-open {
-    position: absolute;
-    left: calc(50% - 8px);
-    height: 25%;
-    border-radius: 50%;
-    top: 64%;
-    width: 16px;
-    height: 16px;
-    background-color: var(--black);
+  background-color: var(--black);
+  border-radius: 50%;
+  height: 16px;
+  left: calc(50% - 8px);
+  position: absolute;
+  top: 64%;
+  width: 16px;
 }
 
 .body {
-	background-color: var(--white);
-	border: 1px solid #f1f1f1;
-	height: 100px;
-	width: 100px;
-	border-radius: 50%;
-	height: 122px;
-    width: 114px;
-    z-index: 20;
-    position: relative;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  height: 122px;
+  position: relative;
+  width: 114px;
+  z-index: 20;
 }
 
 .legs {
-	background-color: var(--white);
-	height: 180px;
-    width: 116px;
-    border-radius: 40% 40% 0% 0%;
-    bottom: -60px;
-    position: absolute;
-    border: 1px solid #f1f1f1;
-    z-index: 10;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 40% 40% 0% 0%;
+  bottom: -60px;
+  height: 180px;
+  position: absolute;
+  width: 116px;
+  z-index: 10;
 }
 
 .pedastal-wrapper {
-	position: absolute;
-	cursor: url(./../images/fire-cursor.png), auto;
-    bottom: 5px;
-    height: 200px;
-    z-index: 50;
+  bottom: 5px;
+  cursor: url(./../images/fire-cursor.png), auto;
+  height: 200px;
+  position: absolute;
+  z-index: 50;
 }
 
 .pedastal {
-    height: 100%;
+  height: 100%;
 }
 
 #fire {
-	z-index: 100;
+  z-index: 100;
 }
 
 .fire {
-	position: absolute;
-	cursor: url(./../images/fire-cursor.png), auto;
-	background: url(./../images/fire.png);
-    height: 40px;
-    width: 40px;
-    background-size: cover;
-    animation: fireAnimation 0.2s infinite alternate;
-    transform-origin: bottom center;
+  animation: fireAnimation 0.2s infinite alternate;
+  background: url(./../images/fire.png);
+  background-size: cover;
+  cursor: url(./../images/fire-cursor.png), auto;
+  height: 40px;
+  position: absolute;
+  transform-origin: bottom center;
+  width: 40px;
 }
 
 @keyframes cloudAnimation {
-   0% {
-       transform: translateX(-200%);
-       animation-timing-function: linear;
-   }
+  0% {
+    animation-timing-function: linear;
+    transform: translateX(-200%);
+  }
 
-   100% {
-       transform: translateX(500%);
-       animation-timing-function: linear;
-   }
+  100% {
+    animation-timing-function: linear;
+    transform: translateX(500%);
+  }
 }
 
 @keyframes fireAnimation {
-   0% {
-       transform: rotate(-10deg);
-       animation-timing-function: ease-in;
-   }
+  0% {
+    animation-timing-function: ease-in;
+    transform: rotate(-10deg);
+  }
 
-   100% {
-       transform: rotate(10deg);
-       animation-timing-function: ease-in;;
-   }
+  100% {
+    animation-timing-function: ease-in;
+    transform: rotate(10deg);
+  }
 }
-
