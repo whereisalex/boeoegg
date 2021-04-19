@@ -170,18 +170,6 @@ body {
   width: 40px;
 }
 
-@keyframes cloudAnimation {
-  0% {
-    animation-timing-function: linear;
-    transform: translateX(-200%);
-  }
-
-  100% {
-    animation-timing-function: linear;
-    transform: translateX(500%);
-  }
-}
-
 @keyframes fireAnimation {
   0% {
     animation-timing-function: ease-in;

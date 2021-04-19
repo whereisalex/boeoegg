@@ -7,6 +7,10 @@ const checkFace = () => {
 	}
   };
   
+const getRandomSize = () => {
+    return 35 + Math.floor(Math.random() * 40);
+};
+
 const addFire = (event) => {
 	const fire = document.createElement('div');
 	const container = document.getElementById('fire');
@@ -19,10 +23,6 @@ const addFire = (event) => {
 	fire.classList.add('fire');
 	container.appendChild(fire);
 	checkFace();
-  };
-  
-  const getRandomSize = () => {
-	return 35 + Math.floor(Math.random() * 40);
   };
   
   const init = () => {
