@@ -181,3 +181,14 @@ body {
     transform: rotate(10deg);
   }
 }
+
+@keyframes cloudAnimation {
+  0% {
+    transform: translateX(-200%);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(500%);
+    animation-timing-function: linear;
+  }
+}
